@@ -1,0 +1,9 @@
+.custom-nav {
+    backdrop-filter: blur(4px);
+}
+
+.custom-nav-links {
+    background: rgba(128, 128, 128, 0.281);
+    border-radius: 25px;
+    padding: 8px 70px 8px 70px;
+}
