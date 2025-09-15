@@ -1,48 +1,71 @@
 "use client";
-
-import './navbar.css';
-import { motion } from "framer-motion";
-import { FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
-import { IoLogoDiscord } from "react-icons/io5";
+import { useState, useCallback } from "react";
+import Link from "next/link";
+import styles from "./navbar.module.css";
+import Image from "next/image";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+  }, []);
+
   return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="custom-nav fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10"
-    >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-white">Marcos.Dev</h1>
+    <header className={styles.navbar}>
+      <div className={styles.container}>
+        <div className={styles.logoContainer}>
+          <Image
+            src="/images/logo.png"
+            alt="Logo de Marcos Vinicius Angeli Costa"
+            width={260}
+            height={260}
+            className={styles.logo}
+            priority
+          />
+        </div>
 
-        <ul className="flex gap-25 text-gray-300 custom-nav-links">
-          <li className="hover:text-white cursor-pointer transition">Início</li>
-          <li className="hover:text-white cursor-pointer transition">Sobre</li>
-          <li className="hover:text-white cursor-pointer transition">Recomendações</li>
-          <li className="hover:text-white cursor-pointer transition">Contato</li>
-        </ul>
+        <button
+          className={styles.menuToggle}
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
+        >
+          ☰
+        </button>
 
-        <div id="nav-contacts">
-          <ul className="flex gap-6 text-gray-300">
-            <li className="hover:text-white cursor-pointer transition">
-              <a href="#linkedin">
-                <FaLinkedin size={30}/>
-              </a>
-            </li>
-            <li className="hover:text-white cursor-pointer transition">
-              <a href="#discord">
-                <IoLogoDiscord size={30}/>
-              </a>
-            </li>
-            <li className="hover:text-white cursor-pointer transition">
-              <a href="#whatsapp">
-                <FaWhatsappSquare size={30}/>
-              </a>
-            </li>
-          </ul>
+        <nav
+          id="main-navigation"
+          className={`${styles.navLinks} ${menuOpen ? styles.active : ""}`}
+          role="navigation"
+          aria-label="Menu principal"
+        >
+          <Link href="#hero" onClick={closeMenu} title="Início">Início</Link>
+          <Link href="#about" onClick={closeMenu} title="Sobre">Sobre</Link>
+          <Link href="#projects" onClick={closeMenu} title="Projetos">Projetos</Link>
+          <Link href="#achivments" onClick={closeMenu} title="Referências">Certificações</Link>
+          <Link href="#testimonials" onClick={closeMenu} title="Referências">Referências</Link>
+          <Link href="#strenghts" onClick={closeMenu} title="Referências">Destaques</Link>
+          <Link href="#socialMedia" onClick={closeMenu} title="Redes">Redes</Link>
+          <Link href="#faq" onClick={closeMenu} title="Dúvidas">Dúvidas</Link>
+        </nav>
+
+        <div className={`${styles.navActions} ${menuOpen ? styles.active : ""}`}>
+          <Link
+            href="#contact"
+            className={`${styles.btn} ${styles.outline}`}
+            onClick={closeMenu}
+            aria-label="Entrar em contato com Marcos Vinicius"
+          >
+            Entrar em Contato
+          </Link>
         </div>
       </div>
-    </motion.nav>
+    </header>
   );
 }

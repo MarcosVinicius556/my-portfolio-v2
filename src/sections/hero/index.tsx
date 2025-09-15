@@ -1,38 +1,42 @@
-// components/Hero.tsx
 "use client";
 
-import './hero.css';
+import styles from "@/sections/hero/hero.module.css";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="hero" id='hero'>
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="container hero-content">
-              <div className="hero-text">
-                  <span className="badge">Transformando ideias em soluções reais.</span>
-                  <h1>Tecnologia com Propósito<br />Código com Qualidade</h1>
-                  <p>
-                    Engenheiro de software com + de 5 anos de experiência. Apaixonado por tecnologia e em criar soluções que atendem um propósito.
-                    <br/> Transformo ideias em código de qualidade, sempre buscando inovação, aprendizado e impacto positivo.
-                  </p>
-                  <Link href="#contact" className="btn solid">Agendar conversa</Link>
-              </div>
-              <div className="hero-image">
-                  <Image
-                      src="/images/logo.png"
-                      alt="Ilustração de pessoas felizes"
-                      width={500}
-                      height={500}
-                      priority
-                  />
-              </div>
-          </motion.div>
-        </section>
+    <section id="hero" className={styles.hero} aria-label="Hero Section - Engenheiro de Software">
+      <motion.div
+        className={styles.inner}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <p className={styles.eyebrow}>Engenheiro de Software</p>
+
+        <h1 className={styles.title}>
+          <span>Tecnologia com Propósito</span>
+          <span>Código com Qualidade</span>
+        </h1>
+
+        <a href="#start" className={styles.primaryCta}>
+          Ver mais
+        </a>
+      </motion.div>
+
+      <video
+        className={styles.video}
+        src="/videos/darkhole.mp4"
+        preload="metadata"
+        autoPlay
+        loop
+        muted
+        playsInline
+        role="presentation"
+      />
+
+      <div className={styles.overlay}></div>
+    </section>
   );
 }

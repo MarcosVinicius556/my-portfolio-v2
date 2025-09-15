@@ -1,53 +1,62 @@
 import './globals.css';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Inter } from "next/font/google";
 import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsappButton';
 
 export const metadata: Metadata = {
-  title: "Psicóloga Ellen Santos Machado | Atendimento Humanizado para Ansiedade, Depressão e Autoconhecimento",
+  title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png"
   },
   description:
-    "Atendimento psicológico online e presencial com a Psicóloga Ellen Santos Machado. Apoio acolhedor para ansiedade, depressão e autoconhecimento.",
+    "Portfólio de Marcos Vinicius Angeli Costa, Engenheiro de Software apaixonado por tecnologia, com experiência em desenvolvimento full stack, microfrontends, React, Java e arquitetura de sistemas. Descubra meus projetos, habilidades e trajetória profissional.",
   keywords: [
-    "psicóloga",
-    "psicóloga Ellen Santos Machado",
-    "terapia online",
-    "terapia presencial",
-    "psicologia",
-    "ansiedade",
-    "depressão",
-    "autoconhecimento",
-    "atendimento psicológico",
-    "psicóloga em Lages",
-    "psicóloga em SC",
-    "psicóloga em Santa Catarina",
-    "psicóloga clínica"
+    "Marcos Vinicius Angeli Costa",
+    "Engenheiro de Software",
+    "Desenvolvedor Full Stack",
+    "Desenvolvedor React",
+    "Java",
+    "Spring Boot",
+    "Next.js",
+    "Microfrontends",
+    "Arquitetura de Software",
+    "Portfólio Marcos Vinicius",
+    "Desenvolvimento Web",
+    "Frontend",
+    "Backend",
+    "Zustand",
+    "Ant Design",
+    "TypeScript"
   ],
-  authors: [{ name: "Ellen Santos Machado", url: "https://ellen-santos-machado.com.br" }],
-  creator: "Ellen Santos Machado",
-  publisher: "Ellen Santos Machado",
+  authors: [{ name: "Marcos Vinicius Angeli Costa", url: "https://seu-dominio.com" }],
+  creator: "Marcos Vinicius Angeli Costa",
+  publisher: "Marcos Vinicius Angeli Costa",
   robots: {
     index: true,
     follow: true,
     nocache: false,
   },
   openGraph: {
-    title: "Psicóloga Ellen Santos Machado | Atendimento Humanizado para Ansiedade e Autoconhecimento",
-    description: "Atendimento psicológico online e presencial com foco em bem-estar emocional, ansiedade, depressão e autoconhecimento.",
-    url: "https://ellen-santos-machado.com.br",
-    siteName: "Ellen Santos Machado - Psicóloga",
+    title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
+    description:
+      "Explore o portfólio de Marcos Vinicius Angeli Costa: projetos de software, experiência em React, Java, microfrontends e soluções escaláveis.",
+    url: "https://seu-dominio.com",
+    siteName: "Portfólio de Marcos Vinicius",
     images: [
       {
-        url: "https://ellen-santos-machado.com.br/images/logo.png",
+        url: "https://seu-dominio.com/images/preview.png",
         width: 1200,
         height: 630,
-        alt: "Psicóloga Ellen Santos Machado - Atendimento humanizado e acolhedor",
-        type: "image/jpeg",
+        alt: "Marcos Vinicius Angeli Costa - Engenheiro de Software",
+        type: "image/png",
       },
     ],
     locale: "pt_BR",
@@ -55,21 +64,22 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicóloga Ellen Santos Machado | Atendimento Humanizado para Ansiedade e Autoconhecimento",
-    description: "Atendimento psicológico online e presencial com foco em bem-estar emocional, ansiedade, depressão e autoconhecimento.",
-    images: ["https://ellen-santos-machado.com.br/images/logo.png"],
+    title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
+    description:
+      "Portfólio de Marcos Vinicius Angeli Costa com foco em React, Java, TypeScript e arquitetura de sistemas modernos.",
+    images: ["https://seu-dominio.com/images/preview.png"],
   },
   alternates: {
-    canonical: "https://ellen-santos-machado.com.br",
+    canonical: "https://seu-dominio.com",
   },
-  category: "business"
+  category: "technology"
 };
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 
-  let measurementId = process.env.GA_MEASUREMENT_ID;
+  // let measurementId = process.env.GA_MEASUREMENT_ID;
   return (
     <html lang="pt-BR" className={inter.className}>
       <head>
@@ -86,36 +96,41 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Person",
-                name: "Ellen Santos Machado",
-                url: "https://ellen-santos-machado.com.br",
-                image: "https://ellen-santos-machado.com.br/images/logo.png",
+                name: "Marcos Vinicius Angeli Costa",
+                url: "https://seu-dominio.com",
+                image: "https://seu-dominio.com/images/profile.png",
                 sameAs: [
-                  "https://www.facebook.com/ellenmachadopsicologa",
-                  "https://www.instagram.com/ellenmachado_psi",
-                  "https://www.linkedin.com/in/ellen-santos-machado",
+                  "https://github.com/seu-usuario",
+                  "https://www.linkedin.com/in/seu-linkedin",
+                  "https://twitter.com/seu-usuario"
                 ],
-                jobTitle: "Psicóloga",
-                telephone: "+55-49-98840-1516",
-                email: "ellensmpsi@gmail.com",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "R. Lídio Réis, 114 - Centro",
-                  addressLocality: "Lages",
-                  addressRegion: "SC",
-                  postalCode: "88502-150",
-                  addressCountry: "BR",
+                jobTitle: "Engenheiro de Software",
+                worksFor: {
+                  "@type": "Organization",
+                  name: "Sua Empresa Atual ou 'Freelancer'"
                 },
                 description:
-                  "Psicóloga especializada em terapia cognitivo-comportamental, oferecendo atendimento humanizado online e presencial.",
+                  "Engenheiro de Software com experiência em desenvolvimento full stack, React, Java, microfrontends, arquitetura de sistemas e soluções escaláveis.",
+                knowsAbout: [
+                  "React",
+                  "Next.js",
+                  "Java",
+                  "Spring Boot",
+                  "Microfrontends",
+                  "Arquitetura de Software",
+                  "TypeScript",
+                  "Ant Design",
+                  "Zustand"
+                ]
               }),
             }}
           />
-          <Script
+          {/* <Script
               strategy="afterInteractive"
               src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-          />
+          /> */}
 
-          <Script
+          {/* <Script
             id="google-analytics"
             strategy="afterInteractive"
           >
@@ -125,10 +140,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               gtag('js', new Date());
               gtag('config', '${measurementId}');
             `}
-          </Script>
+          </Script> */}
         
           <Navbar />
           {children}
+          <WhatsAppButton />
+          <Footer />
         </body>
       </html>
   );

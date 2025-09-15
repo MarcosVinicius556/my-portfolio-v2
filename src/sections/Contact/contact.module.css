@@ -1,0 +1,124 @@
+.emailSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  filter: brightness(0.75);
+}
+
+.emailContainer {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.emailPanel {
+  background-color: var(--surface);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.contactForm {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contactForm h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.formGrid input,
+.formGrid select,
+.formGrid textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.formGrid textarea {
+  min-height: 100px;
+  outline: none;
+}
+
+.formGrid input:focus,
+.formGrid select:focus,
+.formGrid textarea:focus {
+  outline: 2px solid var(--surface);
+}
+
+.formDisclaimer {
+  margin: 20px 0;
+}
+
+.btnSubmit {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: var(--accent);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btnSubmit:hover {
+  filter: brightness(0.75);
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .emailPanel {
+    padding: 0;
+  }
+
+}

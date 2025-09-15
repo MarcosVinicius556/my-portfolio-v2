@@ -1,0 +1,167 @@
+.projects {
+  background: var(--bg);
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.ProjectsCardContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectsWrapper {
+
+  gap: 20px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryBtn {
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.05);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.iconBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.iconBtn:hover {
+  background: #444;
+}
+
+.iconBtn.active {
+  background: var(--accent);
+  color: #000;
+}
+
+.card {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  border-radius: 20px;
+  padding: 40px;
+  gap: 40px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+  height: 600px;
+}
+
+.text {
+  flex: 1 1 300px;
+  min-height: 300px;
+}
+
+.text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.text p {
+  margin-bottom: 20px;
+  opacity: 0.85;
+  line-height: 1.5;
+  height: 170px;
+}
+
+.cta {
+  background: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cta:hover {
+  background: #555;
+}
+
+.image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .ProjectsCardContainer,
+  .ProjectsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
