@@ -1,4 +1,4 @@
-import styles from "./whatsAppButton.module.css";
+import styles from "./whatsappButton.module.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppButton() {
