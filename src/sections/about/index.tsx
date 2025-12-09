@@ -19,7 +19,7 @@ export default function About() {
       <div className={styles.aboutContainer}>
         <div className={styles.aboutLeft}>
           <h2 className={styles.aboutName}>Marcos Vinicius Angeli Costa</h2>
-          <p className={styles.aboutRole}>Engenheiro de Software</p>
+          <p className={styles.aboutRole}>Software Engineer</p>
         </div>
 
         <div className={styles.aboutPhoto}>
@@ -34,14 +34,14 @@ export default function About() {
         </div>
 
         <div className={styles.aboutRight}>
-          <h3 className={styles.aboutTitle}>Profissional TI</h3>
+          <h3 className={styles.aboutTitle}>IT Professional</h3>
 
           <p className={styles.aboutText}>
-            <strong>Marcos Vinicius Angeli Costa</strong> é engenheiro de software apaixonado por tecnologia e inovação. Tem experiência no desenvolvimento de aplicações modernas, com foco em performance, escalabilidade e boas práticas. Ao longo da sua carreira, trabalhou com diferentes linguagens, frameworks e arquiteturas, sempre buscando entregar soluções eficientes e de qualidade.
+            <strong>Marcos Vinicius Angeli Costa</strong> is a software engineer passionate about technology and innovation. He has experience in developing modern applications, focusing on performance, scalability, and best practices. Throughout his career, he has worked with different languages, frameworks, and architectures, always seeking to deliver efficient and quality solutions.
           </p>
 
           <p className={styles.aboutText}>
-            Além da programação, é entusiasta de videogames, gadgets e realidade virtual — paixões que o inspiram a explorar novas ideias e a manter um olhar curioso sobre o futuro da tecnologia. Combinando conhecimento técnico, criatividade e bom humor, seu objetivo é transformar desafios em oportunidades e contribuir para projetos que realmente façam a diferença.
+            Beyond programming, he is an enthusiast of video games, gadgets, and virtual reality — passions that inspire him to explore new ideas and maintain a curious outlook on the future of technology. Combining technical knowledge, creativity, and a good sense of humor, his goal is to turn challenges into opportunities and contribute to projects that truly make a difference.
           </p>
         </div>
       </div>

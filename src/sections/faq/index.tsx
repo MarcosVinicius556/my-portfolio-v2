@@ -11,20 +11,20 @@ interface Question {
 
 const questions: Question[] = [
   {
-    question: "Quais tecnologias domina atualmente?",
-    answer: "Atua com desenvolvimento full-stack, utilizando Java, Spring Boot, TypeScript e React. Também tem experiência com bancos de dados, APIs REST, sistemas legados e processos de modernização. Gosta de explorar novas ferramentas e manter seus conhecimentos sempre atualizados."
+    question: "Which technologies do you currently master?",
+    answer: "Works as a full-stack developer using Java, Spring Boot, TypeScript, ReactJS/TS and NextJS/TS. Also has experience with databases, REST APIs, legacy systems and modernization processes. Enjoys exploring new tools and keeping knowledge always up to date."
   },
   {
-    question: "Qual foi o maior desafio que enfrentou na carreira?",
-    answer: "Um dos maiores desafios foi modernizar sistemas legados complexos, garantindo que tudo continuasse funcionando para os usuários enquanto introduzía melhorias de performance e novas funcionalidades. Foi um ótimo aprendizado sobre arquitetura, testes e gerenciamento de riscos."
+    question: "What was the biggest challenge you've faced in your career?",
+    answer: "One of the biggest challenges was modernizing complex legacy systems while ensuring everything continued running smoothly for users, introducing performance improvements and new features at the same time. It was a valuable learning experience about architecture, testing and risk management."
   },
   {
-    question: "Quais projetos considera mais marcantes na sua trajetória?",
-    answer: "Destaca projetos de integração e automação de sistemas empresariais, além de aplicações web que impactaram diretamente a produtividade de equipes. Também teve a oportunidade de trabalhar em soluções inovadoras que combinaram tecnologia com experiência do usuário."
+    question: "Which projects do you consider most significant in your journey?",
+    answer: "Highlights projects involving system integration and automation, as well as web applications that directly improved team productivity. Also had the opportunity to work on innovative solutions that combined technology with user experience."
   },
   {
-    question: "O que inspira e motiva como profissional?",
-    answer: "Movido pela oportunidade de transformar ideias em soluções reais e eficientes. A tecnologia, aliada à criatividade, inspira a sempre buscar novas formas de resolver problemas, aprender e compartilhar conhecimento. E claro, o lado divertido da inovação, como explorar games e VR, mantém sua energia lá em cima!"
+    question: "What inspires and motivates you as a professional?",
+    answer: "Driven by the opportunity to transform ideas into real and efficient solutions. Technology combined with creativity inspires continuous learning, problem-solving and knowledge sharing. And of course, the fun side of innovation—like exploring games and VR—keeps the energy high!"
   }
 ];
 
@@ -45,7 +45,7 @@ export default function FAQ() {
         viewport={{ once: true, amount: 0.5 }}
       >
         <div className={styles.textContent}>
-          <h2 className={styles.title}>DÚVIDAS COMUNS</h2>
+          <h2 className={styles.title}>FREQUENTLY ASKED QUESTIONS</h2>
         </div>
 
         <div className={styles.faqContainer}>

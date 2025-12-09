@@ -12,42 +12,42 @@ import {
 
 const strengths = [
   {
-    icon: <FaShieldAlt />,
-    title: "Resiliente",
-    description:
-      "Mantém o foco e a determinação mesmo diante de desafios, sempre encontrando maneiras de se adaptar e superar obstáculos.",
+    "icon": <FaShieldAlt />,
+    "title": "Resilient",
+    "description":
+      "Maintains focus and determination even when facing challenges, always finding ways to adapt and overcome obstacles."
   },
   {
-    icon: <FaUsers />,
-    title: "Trabalho em Equipe",
-    description:
-      "Valoriza a colaboração, contribui para o crescimento coletivo e fortalece o ambiente de cooperação entre colegas.",
+    "icon": <FaUsers />,
+    "title": "Teamwork",
+    "description":
+      "Values collaboration, contributes to collective growth, and strengthens a cooperative environment among colleagues."
   },
   {
-    icon: <FaClock />,
-    title: "Organização de Tempo",
-    description:
-      "Gerencia prioridades de forma eficiente, garantindo equilíbrio entre produtividade, prazos e qualidade das entregas.",
+    "icon": <FaClock />,
+    "title": "Time Management",
+    "description":
+      "Efficiently manages priorities, ensuring balance between productivity, deadlines, and quality of deliverables."
   },
   {
-    icon: <FaMountain />,
-    title: "Persistente",
-    description:
-      "Não desiste facilmente, encara dificuldades como oportunidades de aprendizado e segue firme até alcançar os objetivos.",
+    "icon": <FaMountain />,
+    "title": "Persistent",
+    "description":
+      "Does not give up easily, sees difficulties as learning opportunities, and remains committed until goals are achieved."
   },
   {
-    icon: <FaBolt />,
-    title: "Proativo",
-    description:
-      "Antecipase às necessidades, propõe soluções práticas e busca constantemente maneiras de melhorar processos e resultados.",
+    "icon": <FaBolt />,
+    "title": "Proactive",
+    "description":
+      "Anticipates needs, proposes practical solutions, and constantly seeks ways to improve processes and results."
   },
   {
-    icon: <FaSearch />,
-    title: "Investigativo",
-    description:
-      "Demonstra curiosidade construtiva, explora novas ideias e busca compreender a fundo os assuntos para inovar e evoluir.",
-  },
-];
+    "icon": <FaSearch />,
+    "title": "Investigative",
+    "description":
+      "Demonstrates constructive curiosity, explores new ideas, and deeply researches topics to innovate and evolve."
+  }
+]
 
 export default function Strengths() {
   return (
@@ -59,7 +59,7 @@ export default function Strengths() {
         viewport={{ once: true }}
         className={styles.title}
       >
-        Pontos Fortes
+        SOFT SKILLS
       </motion.h2>
       <div className={styles.grid}>
         {strengths.map((item, index) => (

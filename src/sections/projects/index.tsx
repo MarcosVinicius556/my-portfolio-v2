@@ -5,40 +5,53 @@ import { useState } from "react";
 import styles from "@/sections/projects/projects.module.css";
 import { FaGamepad, FaGithub } from "react-icons/fa";
 import { RiPsychotherapyLine } from "react-icons/ri";
-import { AiOutlineIssuesClose } from "react-icons/ai";
+import { AiOutlineAlignCenter, AiOutlineIssuesClose } from "react-icons/ai";
 import Image from "next/image";
 
 const features = [
   {
     title: "Landing Page",
     description:
-      "Site criado para uma psicóloga que tinha apenas um objetivo... Que quando buscassem pelo seu nome, ou por psicólogas na sua região, o seu site fosse exibido. O site ficou com médias todas acima de 90% no Lighthouse e extremamente bem ranqueado no Google, além de ser responsivo e refletir a identidade visual da cliente!",
-    cta: "Visitar",
+      "Site created for a psychologist who had only one goal... That when people searched for her name, or for psychologists in her region, her site would be displayed. The site scored all averages above 90% on Lighthouse and was extremely well ranked on Google, in addition to being responsive and reflecting the client's visual identity! Made with NextTS + TailwindCSS to maximize the SEO.",
+    cta: "Visit",
     image: "/images/psy-landing-page.png",
+    path: "https://www.ellen-santos-machado.com.br/",
     icon: <RiPsychotherapyLine />,
   },
   {
     title: "Sintax Game",
     description:
-      "Desenvolvido quando estava na segunda fase da faculdade, onde atuou como líder, desenvolvedor e apresentador do grupo. O projeto foi pensado e desenvolvido com 1 objetivo - Ensinar novos programadores a importância de se escrever um código de forma limpa e clara - A mensagem foi passada e muito bem recebida, trazendo elementos de gamificação, personagens e referências a games e aos professores da faculdade.",
+      "Developed when I was in the second phase of college, where I acted as leader, developer, and presenter of the group. The project was designed and developed with one goal - to teach new programmers the importance of writing clean and clear code - The message was conveyed and very well received, bringing elements of gamification, characters, and references to games and college professors.",
     cta: "Visitar",
     image: "/images/sintax-game.png",
+    path: "https://sintax-game.netlify.app/",
     icon: <FaGamepad />,
   },
   {
-    title: "Sistema de Chamados",
+    title: "Ticket System",
     description:
-      "Projeto simples, apenas para estudar conceitos de integração entre React + Firebase. Fique à vontade para acessar e criar sua conta! Apenas necessário informar um email e criar uma senha de no mínimo 7 dígitos.",
-    cta: "Visitar",
+      "Simple project, just to study integration concepts between React + Firebase. Feel free to access and create your account! Just need to provide an email and create a password with at least 7 digits.",
+    cta: "Visit",
     image: "/images/sistema-chamados.png",
+    path: "https://chamados-sistema.netlify.app/",
     icon: <AiOutlineIssuesClose />,
   },
   {
-    title: "Mais projetos no GitHub",
+    title: "Landing Page + Micro SaaS",
     description:
-      "Além dos projetos frontend que estão no ar, visite também seu GitHub e dê uma olhada, são + de 80 projetos de estudo desenvolvidos do zero para servir como prova de conceito da tecnologia que estava como foco de seus estudos.",
-    cta: "Visitar",
+      "Made for a real state agent, this projects starts with only one purpose! Reach more distant clients and expand their business through an effective online presence. This site is able to show his own properties, and with no costs for maintaining it, hosting, or another kind of paid stuff. Is developed with NextTS + TailwindCSS + Firebase + Cloudinary.",
+    cta: "Visit",
+    image: "/images/daniel-demo.png",
+    path: "https://www.imobiliariadanielespindola.com.br/",
+    icon: <AiOutlineAlignCenter />,
+  },
+  {
+    title: "More projects on GitHub",
+    description:
+      "In addition to the frontend projects that are live, also visit my GitHub and take a look, there are over 80 study projects developed from scratch to serve as proof of concept for the technology that was the focus of my studies.",
+    cta: "Visit",
     image: "/images/github.png",
+    path: "https://github.com/MarcosVinicius556",
     icon: <FaGithub />,
   },
 ];
@@ -61,15 +74,14 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h2>+ de 5 anos de experiência</h2>
+        <h2>+ of 5 years of experience</h2>
         <p>
-          Ao longo de sua jornada como desenvolvedor, participou da criação de diversas
-          soluções completas — do frontend ao backend. Também atuou em sistemas legados,
-          garantindo manutenção, correções, melhorias e até processos de modernização.
+          Throughout his journey as a developer, he has participated in the creation of various
+          complete solutions — from frontend to backend. He has also worked on legacy systems,
+          ensuring maintenance, corrections, improvements, and even modernization processes.
           <br />
           <br />
-          Confira abaixo alguns de seus projetos que já desenvolveu e que estão disponíveis
-          publicamente para você explorar.
+          Check out some of his projects below that he has developed and that are publicly available for you to explore.
         </p>
       </motion.div>
 
@@ -106,7 +118,7 @@ export default function Projects() {
               >
                 <h2>{features[activeIndex].title}</h2>
                 <p>{features[activeIndex].description}</p>
-                <button className={styles.cta}>{features[activeIndex].cta}</button>
+                <a href={features[activeIndex].path} className={styles.cta} target="_blank" rel="noopener noreferrer">{features[activeIndex].cta}</a>
               </motion.div>
             </AnimatePresence>
 

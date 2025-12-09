@@ -75,7 +75,7 @@ export default function Contact() {
                         <input 
                             type="text" 
                             name="name" 
-                            placeholder="Nome*" 
+                            placeholder="Name*" 
                             value={form.name} 
                             onChange={handleChange} 
                             required 
@@ -83,7 +83,7 @@ export default function Contact() {
                         <input 
                             type="email" 
                             name="email" 
-                            placeholder="Seu melhor email*" 
+                            placeholder="Your best e-mail*" 
                             value={form.email} 
                             onChange={handleChange} 
                             required 
@@ -91,20 +91,20 @@ export default function Contact() {
                         <input 
                             type="tel" 
                             name="phone" 
-                            placeholder="Número de telefone (WhatsApp)" 
+                            placeholder="Phone number (WhatsApp)" 
                             value={form.phone} 
                             onChange={handleChange} 
                         />
                         <textarea 
                             name="message" 
-                            placeholder="Quer me enviar uma prévia do que gostaria de tratar em sessão? Fique a vontade para me contar!" 
+                            placeholder="Would you like to send me a preview of what you'd like to discuss in the session? Feel free to tell me!" 
                             value={form.message} 
                             onChange={handleChange} 
                         />
                     </div>
                     {status && <p className={styles.formDisclaimer}>{status}</p>}
                     <button className={styles.btnSubmit} type="submit" disabled={loading}>
-                        {loading ? 'Enviando...' : 'Enviar Email'}
+                        {loading ? 'Sending...' : 'Send Email'}
                     </button>
                 </form>
           </motion.div>
@@ -118,7 +118,7 @@ export default function Contact() {
                 variants={rightVariant}
               >
             <h2 className={styles.title}>
-              Se preferir um contato mais formal
+              If you prefer a more formal contact
             </h2>
         </motion.div>
       </div>

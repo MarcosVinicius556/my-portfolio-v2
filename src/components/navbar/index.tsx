@@ -45,14 +45,14 @@ export default function Navbar() {
           role="navigation"
           aria-label="Menu principal"
         >
-          <Link href="#hero" onClick={closeMenu} title="Início">Início</Link>
-          <Link href="#about" onClick={closeMenu} title="Sobre">Sobre</Link>
-          <Link href="#projects" onClick={closeMenu} title="Projetos">Projetos</Link>
-          <Link href="#achivments" onClick={closeMenu} title="Referências">Certificações</Link>
-          <Link href="#testimonials" onClick={closeMenu} title="Referências">Referências</Link>
-          <Link href="#strenghts" onClick={closeMenu} title="Referências">Destaques</Link>
-          <Link href="#socialMedia" onClick={closeMenu} title="Redes">Redes</Link>
-          <Link href="#faq" onClick={closeMenu} title="Dúvidas">Dúvidas</Link>
+          <Link href="#hero" onClick={closeMenu} title="Home">Home</Link>
+          <Link href="#about" onClick={closeMenu} title="About">About</Link>
+          <Link href="#projects" onClick={closeMenu} title="Projects">Projects</Link>
+          <Link href="#achivments" onClick={closeMenu} title="Certifications">Certifications</Link>
+          <Link href="#testimonials" onClick={closeMenu} title="References">References</Link>
+          <Link href="#strenghts" onClick={closeMenu} title="Featured">Featured</Link>
+          <Link href="#socialMedia" onClick={closeMenu} title="Social">Social</Link>
+          <Link href="#faq" onClick={closeMenu} title="FAQ">FAQ</Link>
         </nav>
 
         <div className={`${styles.navActions} ${menuOpen ? styles.active : ""}`}>
@@ -62,7 +62,7 @@ export default function Navbar() {
             onClick={closeMenu}
             aria-label="Entrar em contato com Marcos Vinicius"
           >
-            Entrar em Contato
+            Get in Touch
           </Link>
         </div>
       </div>

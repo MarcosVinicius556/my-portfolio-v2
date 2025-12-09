@@ -11,26 +11,26 @@ export default function Footer() {
             Meu Portfólio
           </h2>
           <p className={styles.description}>
-            Desenvolvido com ❤️ usando Next.js, React e CSS Modules.
+            Developed with ❤️ using Next.js, React, and CSS Modules.
           </p>
         </section>
 
         <nav aria-labelledby="footer-links">
           <h3 id="footer-links" className={styles.title}>Links</h3>
           <ul className={styles.list}>
-            <li><Link href="#hero">Início</Link></li>
-            <li><Link href="#about">Sobre</Link></li>
-            <li><Link href="#projects">Projetos</Link></li>
-            <li><Link href="#testimonials">Referências</Link></li>
-            <li><Link href="#strenghts">Pontos Fortes</Link></li>
-            <li><Link href="#socialMedia">Redes</Link></li>
-            <li><Link href="#contact">Email</Link></li>
-            <li><Link href="#faq">Dúvidas</Link></li>
+            <li><Link href="#hero">Home</Link></li>
+            <li><Link href="#about">About</Link></li>
+            <li><Link href="#projects">Projects</Link></li>
+            <li><Link href="#testimonials">References</Link></li>
+            <li><Link href="#strenghts">Soft Skills</Link></li>
+            <li><Link href="#socialMedia">Social Media</Link></li>
+            <li><Link href="#contact">Contact</Link></li>
+            <li><Link href="#faq">FAQ</Link></li>
           </ul>
         </nav>
 
         <address aria-labelledby="footer-socials" className={styles.address}>
-          <h3 id="footer-socials" className={styles.title}>Conecte-se</h3>
+          <h3 id="footer-socials" className={styles.title}>Get in Touch</h3>
           <div className={styles.socials}>
             <a href="https://www.linkedin.com/in/marcos-vinicius-angeli-costa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
             <a href="https://github.com/MarcosVinicius556" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
@@ -41,7 +41,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.copy}>
-        © {new Date().getFullYear()} Marcos Vinicios. Todos os direitos reservados.
+        © {new Date().getFullYear()} Marcos Vinicios. All rights reserved.
       </div>
     </footer>
   );

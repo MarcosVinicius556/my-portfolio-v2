@@ -12,12 +12,42 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { id: 1, name: 'Atuaram juntos em Grupo Casas Bahia', title: 'Líder Técnico | Especialista I', content: 'Trabalhar com o Marcos sempre é um diferencial, não apenas para mim, que estou no dia a dia com ele, mas também para outras squads. Quando veem sua atuação na empresa, já percebem que ele é alguém que faz acontecer, sem enxergar dificuldades. Posso dizer com certeza que ele é um profissional com um olhar atento para detalhes, colaborativo e com um ótimo domínio técnico em backend e frontend, além de ter uma visão de arquitetura de sistemas muito bem desenvolvida, o que faz toda a diferença no nosso dia a dia.', bgColor: '#2E3A59' },
-  { id: 2, name: 'Atuaram juntos em Grupo Casas Bahia', title: 'Especialista II', content: 'Demonstrou dedicação, atenção aos detalhes e uma forte vontade de crescer. Assumiu responsabilidades e enfrentou desafios além do esperado, sempre com comprometimento e excelência. Está trilhando um caminho promissor, superando todas as expectativas. O futuro reserva grandes conquistas - continue assim!', bgColor: '#2E5D34' },
-  { id: 3, name: 'Atuaram juntos em Neomind', title: 'Engenheiro de Software II', content: 'Marcos é uma ótima pessoa para se trabalhar, possui grande conhecimento em boas práticas, Java, SQL, Hibernate, além de outras tecnologias. É dedicado, atencioso e tê-lo no time é um diferencial.', bgColor: '#5A3942' },
-  { id: 4, name: 'Atuaram juntos em HojeApp', title: 'Líder Técnico | Especialista I', content: 'O Marcos é um profissional excepcional, sabe resolver problemas complexos de maneira prática e se destaca pela sua habilidade de comunicação. Além disso é um excelente profissional, sabe trabalhar em equipe, focado, comprometido com o trabalho e assimila rapidamente novos conhecimentos.', bgColor: '#4A3138' },
-  { id: 5, name: 'Atuaram juntos em Grupo Casas Bahia', title: 'Especialista I', content: 'Marcos Vinicius é um profissional exemplar. Além de sua assiduidade nas reuniões, demonstrou competências técnicas louváveis, sendo sempre propositivo nas soluções apresentadas. Também demonstra habilidades sociais notáveis, mostrando-se constantemente solícito e com ótima capacidade de interação.', bgColor: '#8A5E00' },
-];
+  {
+    "id": 1,
+    "name": "Worked together at Grupo Casas Bahia",
+    "title": "Technical Lead | Specialist I",
+    "content": "Working with Marcos is always a differential, not only for me, who collaborates with him daily, but also for other squads. When people see his work, it's clear that he is someone who gets things done without dwelling on obstacles. I can say with certainty that he is a professional with great attention to detail, collaborative, and with strong technical skills in both backend and frontend, as well as a well-developed systems architecture vision — something that makes a big difference in our day-to-day work.",
+    "bgColor": "#2E3A59"
+  },
+  {
+    "id": 2,
+    "name": "Worked together at Grupo Casas Bahia",
+    "title": "Specialist II",
+    "content": "He demonstrated dedication, attention to detail, and a strong desire to grow. He took on responsibilities and faced challenges beyond expectations, always with commitment and excellence. He is building a promising path, surpassing all expectations. The future holds great achievements — keep it up!",
+    "bgColor": "#2E5D34"
+  },
+  {
+    "id": 3,
+    "name": "Worked together at Neomind",
+    "title": "Software Engineer II",
+    "content": "Marcos is great to work with. He has strong knowledge in best practices, Java, SQL, Hibernate, among other technologies. He is dedicated, attentive, and having him on the team is a real advantage.",
+    "bgColor": "#5A3942"
+  },
+  {
+    "id": 4,
+    "name": "Worked together at HojeApp",
+    "title": "Technical Lead | Specialist I",
+    "content": "Marcos is an exceptional professional. He solves complex problems in a practical way and stands out for his communication skills. He is also an excellent team player — focused, committed to his work, and quick to absorb new knowledge.",
+    "bgColor": "#4A3138"
+  },
+  {
+    "id": 5,
+    "name": "Worked together at Grupo Casas Bahia",
+    "title": "Specialist I",
+    "content": "Marcos Vinicius is an exemplary professional. In addition to being consistent in meetings, he demonstrated admirable technical skills, always proactive in proposing solutions. He also shows remarkable social abilities, being helpful and maintaining great interaction with the team.",
+    "bgColor": "#8A5E00"
+  }
+]
 
 export default function TestimonialsSection() {
 
@@ -35,9 +65,9 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
-          <p className={styles.subtitle}>Referências</p>
+          <p className={styles.subtitle}>References</p>
           <h2 id="testimonials-heading" className={styles.title}>
-            O que colegas e colaboradores destacam sobre minha atuação profissional
+            What colleagues and collaborators highlight about my professional performance
           </h2>
         </motion.div>
 

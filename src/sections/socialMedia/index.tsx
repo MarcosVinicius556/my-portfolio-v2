@@ -28,7 +28,7 @@ const SocialMedia: React.FC = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <h2 className={styles.title}>
-            Vamos nos conectar! <br /> <br /> Confira minhas redes sociais
+            Let's connect! <br /> <br /> Check out my social media profiles.
           </h2>
         </motion.div>
 
@@ -38,7 +38,7 @@ const SocialMedia: React.FC = () => {
               key: 'linkedin',
               title: 'Linkedin',
               username: 'Marcos Vinicius Angeli Costa',
-              description: 'Conecte-se comigo e acompanhe minha trajetória como engenheiro de software.',
+              description: 'Get in touch with me and follow my journey as a software engineer.',
               src: '/images/profile.jpg',
               gradientClass: styles.linkedinGradient,
             },
@@ -46,7 +46,7 @@ const SocialMedia: React.FC = () => {
               key: 'instagram',
               title: 'Instagram',
               username: 'O_l3on',
-              description: 'Um mix de tecnologia, games e meu lado mais pessoal. Bora interagir!',
+              description: 'A mix of technology, games, and my more personal side. Let\'s interact!',
               src: '/images/insta_profile.jpg',
               gradientClass: styles.instagramGradient,
             },
@@ -64,7 +64,7 @@ const SocialMedia: React.FC = () => {
                 <div className={styles.infoCardDetails}>
                   <Image
                     src={social.src}
-                    alt={`Foto de ${social.username}, Engenheiro de Software`}
+                    alt={`Photo of ${social.username}, Software Engineer`}
                     width={150}
                     height={150}
                     className={styles.photo}
@@ -76,7 +76,7 @@ const SocialMedia: React.FC = () => {
                 </div>
               </div>
               <div className={styles.goal}>
-                <button className={styles.button}>Acessar</button>
+                <button className={styles.button}>Access</button>
               </div>
             </motion.div>
           ))}

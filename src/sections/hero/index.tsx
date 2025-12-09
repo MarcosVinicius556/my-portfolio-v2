@@ -13,15 +13,15 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <p className={styles.eyebrow}>Engenheiro de Software</p>
+        <p className={styles.eyebrow}>Software Engineer</p>
 
         <h1 className={styles.title}>
-          <span>Tecnologia com Propósito</span>
-          <span>Código com Qualidade</span>
+          <span>Technology with Purpose</span>
+          <span>Code with Quality</span>
         </h1>
 
         <a href="#start" className={styles.primaryCta}>
-          Ver mais
+          See More
         </a>
       </motion.div>
 
