@@ -20,7 +20,7 @@ export default function Hero() {
           <span>Code with Quality</span>
         </h1>
 
-        <a href="#start" className={styles.primaryCta}>
+        <a href="#about" className={styles.primaryCta}>
           See More
         </a>
       </motion.div>
