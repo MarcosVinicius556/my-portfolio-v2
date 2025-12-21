@@ -9,47 +9,45 @@ import {
     FaUsers, 
     FaShieldAlt 
 } from "react-icons/fa";
-
-const strengths = [
-  {
-    "icon": <FaShieldAlt />,
-    "title": "Resilient",
-    "description":
-      "Maintains focus and determination even when facing challenges, always finding ways to adapt and overcome obstacles."
-  },
-  {
-    "icon": <FaUsers />,
-    "title": "Teamwork",
-    "description":
-      "Values collaboration, contributes to collective growth, and strengthens a cooperative environment among colleagues."
-  },
-  {
-    "icon": <FaClock />,
-    "title": "Time Management",
-    "description":
-      "Efficiently manages priorities, ensuring balance between productivity, deadlines, and quality of deliverables."
-  },
-  {
-    "icon": <FaMountain />,
-    "title": "Persistent",
-    "description":
-      "Does not give up easily, sees difficulties as learning opportunities, and remains committed until goals are achieved."
-  },
-  {
-    "icon": <FaBolt />,
-    "title": "Proactive",
-    "description":
-      "Anticipates needs, proposes practical solutions, and constantly seeks ways to improve processes and results."
-  },
-  {
-    "icon": <FaSearch />,
-    "title": "Investigative",
-    "description":
-      "Demonstrates constructive curiosity, explores new ideas, and deeply researches topics to innovate and evolve."
-  }
-]
+import { useTranslation } from "@/app/i18n/useTranslation";
 
 export default function Strengths() {
+
+  const translations = useTranslation();
+
+  const strengths = [
+    {
+      "icon": <FaShieldAlt />,
+      "title": translations.strengths.resilient.title,
+      "description": translations.strengths.resilient.description
+    },
+    {
+      "icon": <FaUsers />,
+      "title": translations.strengths.teamwork.title,
+      "description": translations.strengths.teamwork.description
+    },
+    {
+      "icon": <FaClock />,
+      "title": translations.strengths.timeManagement.title,
+      "description": translations.strengths.timeManagement.description
+    },
+    {
+      "icon": <FaMountain />,
+      "title": translations.strengths.persistent.title,
+      "description": translations.strengths.persistent.description
+    },
+    {
+      "icon": <FaBolt />,
+      "title": translations.strengths.proactive.title,
+      "description": translations.strengths.proactive.description
+    },
+    {
+      "icon": <FaSearch />,
+      "title": translations.strengths.investigative.title,
+      "description": translations.strengths.investigative.description
+    }
+  ]
+
   return (
     <section id="strenghts" className={styles.section}>
       <motion.h2
@@ -59,7 +57,7 @@ export default function Strengths() {
         viewport={{ once: true }}
         className={styles.title}
       >
-        SOFT SKILLS
+        {translations.strengths.title}
       </motion.h2>
       <div className={styles.grid}>
         {strengths.map((item, index) => (

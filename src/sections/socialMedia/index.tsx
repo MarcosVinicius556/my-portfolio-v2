@@ -4,6 +4,7 @@ import React, { memo } from 'react';
 import { motion, Variants } from 'framer-motion';
 import styles from './socialMedia.module.css';
 import Image from 'next/image';
+import { useTranslation } from '@/app/i18n/useTranslation';
 
 const panelVariants: Record<'left' | 'right', Variants> = {
   left: {
@@ -17,6 +18,9 @@ const panelVariants: Record<'left' | 'right', Variants> = {
 };
 
 const SocialMedia: React.FC = () => {
+
+  const translations = useTranslation();
+
   return (
     <section id='socialMedia' className={styles.section}>
       <div className={styles.container}>
@@ -28,7 +32,7 @@ const SocialMedia: React.FC = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <h2 className={styles.title}>
-            Let's connect! <br /> <br /> Check out my social media profiles.
+            {translations.social.title} <br /> <br /> {translations.social.subtitle}
           </h2>
         </motion.div>
 
@@ -38,7 +42,7 @@ const SocialMedia: React.FC = () => {
               key: 'linkedin',
               title: 'Linkedin',
               username: 'Marcos Vinicius Angeli Costa',
-              description: 'Get in touch with me and follow my journey as a software engineer.',
+              description: translations.social.card.linkedin.description,
               src: '/images/profile.jpg',
               gradientClass: styles.linkedinGradient,
             },
@@ -46,7 +50,7 @@ const SocialMedia: React.FC = () => {
               key: 'instagram',
               title: 'Instagram',
               username: 'O_l3on',
-              description: 'A mix of technology, games, and my more personal side. Let\'s interact!',
+              description: translations.social.card.instagram.description,
               src: '/images/insta_profile.jpg',
               gradientClass: styles.instagramGradient,
             },
@@ -76,7 +80,7 @@ const SocialMedia: React.FC = () => {
                 </div>
               </div>
               <div className={styles.goal}>
-                <button className={styles.button}>Access</button>
+                <button className={styles.button}>{translations.social.cta}</button>
               </div>
             </motion.div>
           ))}

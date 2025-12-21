@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styles from './contact.module.css';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/app/i18n/useTranslation';
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -56,6 +57,8 @@ export default function Contact() {
     visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 120, damping: 20 } },
   } as const;
 
+  const translations = useTranslation();
+
   return (
     <section id='contact' className={styles.emailSection}>
         <div className={styles.container}>
@@ -75,7 +78,7 @@ export default function Contact() {
                         <input 
                             type="text" 
                             name="name" 
-                            placeholder="Name*" 
+                            placeholder={translations.contact.placeholders.name}
                             value={form.name} 
                             onChange={handleChange} 
                             required 
@@ -83,7 +86,7 @@ export default function Contact() {
                         <input 
                             type="email" 
                             name="email" 
-                            placeholder="Your best e-mail*" 
+                            placeholder={translations.contact.placeholders.email}
                             value={form.email} 
                             onChange={handleChange} 
                             required 
@@ -91,20 +94,20 @@ export default function Contact() {
                         <input 
                             type="tel" 
                             name="phone" 
-                            placeholder="Phone number (WhatsApp)" 
+                            placeholder={translations.contact.placeholders.phone}
                             value={form.phone} 
                             onChange={handleChange} 
                         />
                         <textarea 
                             name="message" 
-                            placeholder="Would you like to send me a preview of what you'd like to discuss in the session? Feel free to tell me!" 
+                            placeholder={translations.contact.placeholders.message} 
                             value={form.message} 
                             onChange={handleChange} 
                         />
                     </div>
                     {status && <p className={styles.formDisclaimer}>{status}</p>}
                     <button className={styles.btnSubmit} type="submit" disabled={loading}>
-                        {loading ? 'Sending...' : 'Send Email'}
+                        {loading ? translations.contact.ctaLoading : translations.contact.cta}
                     </button>
                 </form>
           </motion.div>
@@ -118,7 +121,7 @@ export default function Contact() {
                 variants={rightVariant}
               >
             <h2 className={styles.title}>
-              If you prefer a more formal contact
+              {translations.contact.title}
             </h2>
         </motion.div>
       </div>

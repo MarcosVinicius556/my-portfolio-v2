@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslation } from "@/app/i18n/useTranslation";
 import styles from "./achivments.module.css";
 import { motion } from "framer-motion";
 import { Trophy } from "lucide-react";
@@ -16,19 +17,22 @@ type Course = {
   progress: number;
 };
 
-const courses: Course[] = [
-  { id: 1, title: "Java", description: "Java COMPLETE 2023/2024 Object-Oriented Programming + Projects.", icon: <Trophy size={28} />, unlocked: true, progress: 100 },
-  { id: 2, title: "React", description: "React JS from zero to advanced in practice.", icon: <Trophy size={28} />, unlocked: true, progress: 100 },
-  { id: 3, title: "TypeScript", description: "TypeScript from basics to advanced (with React, Express).", icon: <Trophy size={28} />, unlocked: true, progress: 100 },
-  { id: 4, title: "Java Microservices", description: "Java Microservices with Spring Boot and Spring Cloud.", icon: <Trophy size={28} />, unlocked: true, progress: 100 },
-  { id: 5, title: "English", description: "Intermediate level B1.", icon: <Trophy size={28} />, unlocked: true, progress: 100 },
-  { id: 6, title: "English", description: "Upper-intermediate level B2.", icon: <Trophy size={28} />, unlocked: false, progress: 40 },
-  { id: 7, title: "Information Systems", description: "Bachelor's degree.", icon: <Trophy size={28} />, unlocked: false, progress: 55 },
-  { id: 8, title: "Microservices and Messaging", description: "Mastering Microservices and Messaging with Spring Cloud and Docker.", icon: <Trophy size={28} />, unlocked: false, progress: 20 },
-{ id: 9, title: "Azure Kubernetes Service", description: "Container orchestration on AKS.", icon: <Trophy size={28} />, unlocked: false, progress: 15 },
-];
-
 export default function Achivments() {
+
+  const translations = useTranslation();
+
+  const courses: Course[] = [
+    { id: 1, title: translations.achivments.cards.java.title, description: translations.achivments.cards.java.description, icon: <Trophy size={28} />, unlocked: true, progress: 100 },
+    { id: 2, title: translations.achivments.cards.react.title, description: translations.achivments.cards.react.description, icon: <Trophy size={28} />, unlocked: true, progress: 100 },
+    { id: 3, title: translations.achivments.cards.typescript.title, description: translations.achivments.cards.typescript.description, icon: <Trophy size={28} />, unlocked: true, progress: 100 },
+    { id: 4, title: translations.achivments.cards.javaMicroservices.title, description: translations.achivments.cards.javaMicroservices.description, icon: <Trophy size={28} />, unlocked: true, progress: 100 },
+    { id: 5, title: translations.achivments.cards.englishB1.title, description: translations.achivments.cards.englishB1.description, icon: <Trophy size={28} />, unlocked: true, progress: 100 },
+    { id: 6, title: translations.achivments.cards.englishB2.title, description: translations.achivments.cards.englishB2.description, icon: <Trophy size={28} />, unlocked: false, progress: 40 },
+    { id: 7, title: translations.achivments.cards.informationSystems.title, description: translations.achivments.cards.informationSystems.description, icon: <Trophy size={28} />, unlocked: false, progress: 55 },
+    { id: 8, title: translations.achivments.cards.microservicesMessaging.title, description: translations.achivments.cards.microservicesMessaging.description, icon: <Trophy size={28} />, unlocked: false, progress: 20 },
+    { id: 9, title: translations.achivments.cards.aks.title, description: translations.achivments.cards.aks.description, icon: <Trophy size={28} />, unlocked: false, progress: 15 },
+  ];
+
   return (
     <section id="achivments" className={styles.section} aria-label="Cursos e Certificações">
       <div className={styles.container}>
@@ -39,7 +43,7 @@ export default function Achivments() {
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.title}>Courses & Certifications</h2>
+          <h2 className={styles.title}>{translations.achivments.title}</h2>
         </motion.div>
 
         <div className={styles.grid}>

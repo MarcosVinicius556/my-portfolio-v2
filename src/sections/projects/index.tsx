@@ -7,54 +7,7 @@ import { FaGamepad, FaGithub } from "react-icons/fa";
 import { RiPsychotherapyLine } from "react-icons/ri";
 import { AiOutlineAlignCenter, AiOutlineIssuesClose } from "react-icons/ai";
 import Image from "next/image";
-
-const features = [
-  {
-    title: "Landing Page",
-    description:
-      "Site created for a psychologist who had only one goal... That when people searched for her name, or for psychologists in her region, her site would be displayed. The site scored all averages above 90% on Lighthouse and was extremely well ranked on Google, in addition to being responsive and reflecting the client's visual identity! Made with NextTS + TailwindCSS to maximize the SEO.",
-    cta: "Visit",
-    image: "/images/psy-landing-page.png",
-    path: "https://www.ellen-santos-machado.com.br/",
-    icon: <RiPsychotherapyLine />,
-  },
-  {
-    title: "Sintax Game",
-    description:
-      "Developed when I was in the second phase of college, where I acted as leader, developer, and presenter of the group. The project was designed and developed with one goal - to teach new programmers the importance of writing clean and clear code - The message was conveyed and very well received, bringing elements of gamification, characters, and references to games and college professors.",
-    cta: "Visitar",
-    image: "/images/sintax-game.png",
-    path: "https://sintax-game.netlify.app/",
-    icon: <FaGamepad />,
-  },
-  {
-    title: "Ticket System",
-    description:
-      "Simple project, just to study integration concepts between React + Firebase. Feel free to access and create your account! Just need to provide an email and create a password with at least 7 digits.",
-    cta: "Visit",
-    image: "/images/sistema-chamados.png",
-    path: "https://chamados-sistema.netlify.app/",
-    icon: <AiOutlineIssuesClose />,
-  },
-  {
-    title: "Landing Page + Micro SaaS",
-    description:
-      "Made for a real state agent, this projects starts with only one purpose! Reach more distant clients and expand their business through an effective online presence. This site is able to show his own properties, and with no costs for maintaining it, hosting, or another kind of paid stuff. Is developed with NextTS + TailwindCSS + Firebase + Cloudinary.",
-    cta: "Visit",
-    image: "/images/daniel-demo.png",
-    path: "https://www.imobiliariadanielespindola.com.br/",
-    icon: <AiOutlineAlignCenter />,
-  },
-  {
-    title: "More projects on GitHub",
-    description:
-      "In addition to the frontend projects that are live, also visit my GitHub and take a look, there are over 80 study projects developed from scratch to serve as proof of concept for the technology that was the focus of my studies.",
-    cta: "Visit",
-    image: "/images/github.png",
-    path: "https://github.com/MarcosVinicius556",
-    icon: <FaGithub />,
-  },
-];
+import { useTranslation } from "@/app/i18n/useTranslation";
 
 const cardVariants: Variants = {
   initial: { opacity: 0, x: 50 },
@@ -65,6 +18,51 @@ const cardVariants: Variants = {
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const translations = useTranslation();
+
+  const features = [
+    {
+      title: translations.projectsSection.projects.projectLandingPage.title,
+      description: translations.projectsSection.projects.projectLandingPage.description,
+      cta: translations.projectsSection.projects.projectLandingPage.cta,
+      image: "/images/psy-landing-page.png",
+      path: "https://www.ellen-santos-machado.com.br/",
+      icon: <RiPsychotherapyLine />,
+    },
+    {
+      title: translations.projectsSection.projects.projectSintaxGame.title,
+      description: translations.projectsSection.projects.projectSintaxGame.description,
+      cta: translations.projectsSection.projects.projectSintaxGame.cta,
+      image: "/images/sintax-game.png",
+      path: "https://sintax-game.netlify.app/",
+      icon: <FaGamepad />,
+    },
+    {
+      title: translations.projectsSection.projects.projectTicketSystem.title,
+      description: translations.projectsSection.projects.projectTicketSystem.description,
+      cta: translations.projectsSection.projects.projectTicketSystem.cta,
+      image: "/images/sistema-chamados.png",
+      path: "https://chamados-sistema.netlify.app/",
+      icon: <AiOutlineIssuesClose />,
+    },
+    {
+      title: translations.projectsSection.projects.projectDanielEspindola.title,
+      description: translations.projectsSection.projects.projectDanielEspindola.description,
+      cta: translations.projectsSection.projects.projectDanielEspindola.cta,
+      image: "/images/daniel-demo.png",
+      path: "https://www.imobiliariadanielespindola.com.br/",
+      icon: <AiOutlineAlignCenter />,
+    },
+    {
+      title: translations.projectsSection.projects.projectGitHub.title,
+      description: translations.projectsSection.projects.projectGitHub.description,
+      cta: translations.projectsSection.projects.projectGitHub.cta,
+      image: "/images/github.png",
+      path: "https://github.com/MarcosVinicius556",
+      icon: <FaGithub />,
+    },
+  ];
+
   return (
     <section id="projects" className={styles.projects} aria-label="Projetos Desenvolvidos">
       <motion.div
@@ -74,14 +72,12 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h2>+ of 5 years of experience</h2>
+        <h2>{translations.projectsSection.title}</h2>
         <p>
-          Throughout his journey as a developer, he has participated in the creation of various
-          complete solutions — from frontend to backend. He has also worked on legacy systems,
-          ensuring maintenance, corrections, improvements, and even modernization processes.
+          {translations.projectsSection.text1}
           <br />
           <br />
-          Check out some of his projects below that he has developed and that are publicly available for you to explore.
+          {translations.projectsSection.text2}
         </p>
       </motion.div>
 

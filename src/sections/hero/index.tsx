@@ -1,9 +1,13 @@
 "use client";
 
+import { useTranslation } from "@/app/i18n/useTranslation";
 import styles from "@/sections/hero/hero.module.css";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+
+  const translations = useTranslation();
+
   return (
     <section id="hero" className={styles.hero} aria-label="Hero Section - Engenheiro de Software">
       <motion.div
@@ -13,15 +17,15 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <p className={styles.eyebrow}>Software Engineer</p>
+        <p className={styles.eyebrow}>{translations.hero.eyebrow}</p>
 
         <h1 className={styles.title}>
-          <span>Technology with Purpose</span>
-          <span>Code with Quality</span>
+          <span>{translations.hero.titleLine1}</span>
+          <span>{translations.hero.titleLine2}</span>
         </h1>
 
         <a href="#about" className={styles.primaryCta}>
-          See More
+          {translations.hero.primaryCta}
         </a>
       </motion.div>
 
