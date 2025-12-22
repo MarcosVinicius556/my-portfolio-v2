@@ -2,12 +2,13 @@ import './globals.css';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Inter } from "next/font/google";
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import WhatsAppButton from '@/components/whatsappButton';
+import Providers from './providers';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
     description:
-      "Portfólio de Marcos Vinicius Angeli Costa com foco em React, Java, TypeScript e arquitetura de sistemas modernos.",
+      "Portfólio de Marcos Vinicius Angeli Costa com foco em React, Next, Py, Java, TypeScript e arquitetura de sistemas modernos.",
     images: ["https://seu-dominio.com/images/preview.png"],
   },
   alternates: {
@@ -141,11 +142,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               gtag('config', '${measurementId}');
             `}
           </Script> */}
-        
-          <Navbar />
-          {children}
-          <WhatsAppButton />
-          <Footer />
+          <Providers>
+            <Navbar />
+            {children}
+            <WhatsAppButton />
+            <Footer />
+          </Providers>
         </body>
       </html>
   );

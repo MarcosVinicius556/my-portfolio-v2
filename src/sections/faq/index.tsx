@@ -3,30 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react';
 import styles from './faq.module.css';
-
-interface Question {
-  question: string;
-  answer: string;
-}
-
-const questions: Question[] = [
-  {
-    question: "Which technologies do you currently master?",
-    answer: "Works as a full-stack developer using Java, Spring Boot, TypeScript, ReactJS/TS and NextJS/TS. Also has experience with databases, REST APIs, legacy systems and modernization processes. Enjoys exploring new tools and keeping knowledge always up to date."
-  },
-  {
-    question: "What was the biggest challenge you've faced in your career?",
-    answer: "One of the biggest challenges was modernizing complex legacy systems while ensuring everything continued running smoothly for users, introducing performance improvements and new features at the same time. It was a valuable learning experience about architecture, testing and risk management."
-  },
-  {
-    question: "Which projects do you consider most significant in your journey?",
-    answer: "Highlights projects involving system integration and automation, as well as web applications that directly improved team productivity. Also had the opportunity to work on innovative solutions that combined technology with user experience."
-  },
-  {
-    question: "What inspires and motivates you as a professional?",
-    answer: "Driven by the opportunity to transform ideas into real and efficient solutions. Technology combined with creativity inspires continuous learning, problem-solving and knowledge sharing. And of course, the fun side of innovation—like exploring games and VR—keeps the energy high!"
-  }
-];
+import { useTranslation } from '@/app/i18n/useTranslation';
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -34,6 +11,8 @@ export default function FAQ() {
   const toggleQuestion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  const translations = useTranslation();
 
   return (
     <section id='faq' className={styles.section}>
@@ -49,7 +28,7 @@ export default function FAQ() {
         </div>
 
         <div className={styles.faqContainer}>
-          {questions.map((q, index) => (
+          {[1,2,3,4].map((q, index) => (
             <div key={index} className={styles.faqItem}>
               <div
                 className={styles.faqQuestion}
@@ -57,7 +36,7 @@ export default function FAQ() {
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
-                <h3>{q.question}</h3>
+                <h3>{translations.faq.questions[index].question}</h3>
                 <motion.span
                   className={styles.toggleIcon}
                   animate={{ rotate: activeIndex === index ? 45 : 0 }}
@@ -77,7 +56,7 @@ export default function FAQ() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p>{q.answer}</p>
+                    <p>{translations.faq.questions[index].answer}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

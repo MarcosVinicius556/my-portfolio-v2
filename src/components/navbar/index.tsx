@@ -3,9 +3,12 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import Image from "next/image";
+import { useTranslation } from "@/app/i18n/useTranslation";
+import ToogleLanguageButton from "../toogleLanguageButton";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const translation = useTranslation();
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((prev) => !prev);
@@ -27,6 +30,7 @@ export default function Navbar() {
             className={styles.logo}
             priority
           />
+          <ToogleLanguageButton />
         </div>
 
         <button
@@ -45,14 +49,14 @@ export default function Navbar() {
           role="navigation"
           aria-label="Menu principal"
         >
-          <Link href="#hero" onClick={closeMenu} title="Home">Home</Link>
-          <Link href="#about" onClick={closeMenu} title="About">About</Link>
-          <Link href="#projects" onClick={closeMenu} title="Projects">Projects</Link>
-          <Link href="#achivments" onClick={closeMenu} title="Certifications">Certifications</Link>
-          <Link href="#testimonials" onClick={closeMenu} title="References">References</Link>
-          <Link href="#strenghts" onClick={closeMenu} title="Featured">Featured</Link>
-          <Link href="#socialMedia" onClick={closeMenu} title="Social">Social</Link>
-          <Link href="#faq" onClick={closeMenu} title="FAQ">FAQ</Link>
+          <Link href="#hero" onClick={closeMenu} title="Home">{translation.navbar.home}</Link>
+          <Link href="#about" onClick={closeMenu} title="About">{translation.navbar.about}</Link>
+          <Link href="#projects" onClick={closeMenu} title="Projects">{translation.navbar.projects}</Link>
+          <Link href="#achivments" onClick={closeMenu} title="Certifications">{translation.navbar.certifications}</Link>
+          <Link href="#testimonials" onClick={closeMenu} title="References">{translation.navbar.references}</Link>
+          <Link href="#strenghts" onClick={closeMenu} title="Featured">{translation.navbar.featured}</Link>
+          <Link href="#socialMedia" onClick={closeMenu} title="Social">{translation.navbar.social}</Link>
+          <Link href="#faq" onClick={closeMenu} title="FAQ">{translation.navbar.faq}</Link>
         </nav>
 
         <div className={`${styles.navActions} ${menuOpen ? styles.active : ""}`}>
@@ -62,7 +66,7 @@ export default function Navbar() {
             onClick={closeMenu}
             aria-label="Entrar em contato com Marcos Vinicius"
           >
-            Get in Touch
+            {translation.navbar.contact}
           </Link>
         </div>
       </div>
