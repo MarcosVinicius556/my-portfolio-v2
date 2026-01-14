@@ -57,7 +57,7 @@ const testimonials: Testimonial[] = [
   }
 ]
 
-export default function TestimonialsSection() {
+export default function Testimonials() {
 
   const translations = useTranslation();
 
