@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.copy}>
-        © {new Date().getFullYear()} Marcos Vinicios. All rights reserved.
+        © {new Date().getFullYear()} Marcos Vinicius Angeli Costa. All rights reserved.
       </div>
     </footer>
   );

@@ -12,11 +12,10 @@ const transporter = nodemailer.createTransport({
 export async function POST(req: Request) {
   try {
     const { name, email, message, objective, phone } = await req.json();
-
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Todos os campos são obrigatórios' }, { status: 400 });
     }
-
+    
     const mailOptions = {
       from: '"Site" <marcosvinicios4132@gmail.com>', 
       to: process.env.EMAIL_TO,
@@ -31,8 +30,7 @@ export async function POST(req: Request) {
       `,
     };
 
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email enviado:', info.messageId);
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true });
   } catch (error) {

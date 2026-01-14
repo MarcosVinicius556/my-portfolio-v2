@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
       className={styles.section}
       aria-labelledby="testimonials-heading"
     >
-      <div className="container">
+      <div className={styles.testimonialsContainer}>
         <motion.div
           className={styles.header}
           initial={{ opacity: 0, scale: 0.9 }}

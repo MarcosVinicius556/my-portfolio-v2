@@ -1,13 +1,12 @@
 .section {
     padding: 6rem 2rem;
-    /* background: radial-gradient(ellipse at center, #121212 0%, #0d0d0d 100%); */
     background: var(--surface);
     color: var(--text);
     text-align: center;
     overflow: hidden;
 }
 
-.container {
+.testimonialsContainer {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -43,7 +42,7 @@
     width: 350px;
     height: auto;
     padding: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 4px;
     color: white;
     transition: transform 0.8s ease, opacity 0.8s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);

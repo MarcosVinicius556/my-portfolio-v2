@@ -1,5 +1,6 @@
 "use client";
 
+import Typewriter from 'typewriter-effect';
 import { useTranslation } from "@/app/i18n/useTranslation";
 import styles from "@/sections/hero/hero.module.css";
 import { motion } from "framer-motion";
@@ -20,8 +21,25 @@ export default function Hero() {
         <p className={styles.eyebrow}>{translations.hero.eyebrow}</p>
 
         <h1 className={styles.title}>
-          <span>{translations.hero.titleLine1}</span>
-          <span>{translations.hero.titleLine2}</span>
+          <Typewriter
+              options={{
+                  strings: [
+                    `<span>${translations.hero.titleLine1}</span><span>${translations.hero.titleLine2}</span>`
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                  cursor: '',
+              }}
+              onInit={(typewriter) => {
+                  typewriter
+                    .pauseFor(5500)
+                    .deleteAll()
+                    .start();
+              }}
+          />
+          
+          
         </h1>
 
         <a href="#about" className={styles.primaryCta}>

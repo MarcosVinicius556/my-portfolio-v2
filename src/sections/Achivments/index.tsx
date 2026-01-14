@@ -5,7 +5,6 @@ import styles from "./achivments.module.css";
 import { motion } from "framer-motion";
 import { Trophy } from "lucide-react";
 import { JSX } from "react";
-import { FaCheck } from "react-icons/fa";
 import { FiLoader } from "react-icons/fi";
 
 type Course = {

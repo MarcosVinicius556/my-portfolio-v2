@@ -24,7 +24,7 @@ export default function FAQ() {
         viewport={{ once: true, amount: 0.5 }}
       >
         <div className={styles.textContent}>
-          <h2 className={styles.title}>FREQUENTLY ASKED QUESTIONS</h2>
+          <h2 className={styles.title}>{translations.faq.title}</h2>
         </div>
 
         <div className={styles.faqContainer}>

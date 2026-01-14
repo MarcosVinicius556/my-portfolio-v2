@@ -13,12 +13,12 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
+    icon: "/icons/favicon.ico",
+    shortcut: "/icons/favicon.ico",
+    apple: "/icons/apple-touch-icon.png"
   },
   description:
-    "Portfólio de Marcos Vinicius Angeli Costa, Engenheiro de Software apaixonado por tecnologia, com experiência em desenvolvimento full stack, microfrontends, React, Java e arquitetura de sistemas. Descubra meus projetos, habilidades e trajetória profissional.",
+    "Portfólio de Marcos Vinicius Angeli Costa, Engenheiro de Software apaixonado por tecnologia, com experiência em desenvolvimento full stack, microfrontends, React, Next, TypeScript, Java e arquitetura de sistemas. Descubra meus projetos, habilidades e trajetória profissional.",
   keywords: [
     "Marcos Vinicius Angeli Costa",
     "Engenheiro de Software",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Ant Design",
     "TypeScript"
   ],
-  authors: [{ name: "Marcos Vinicius Angeli Costa", url: "https://seu-dominio.com" }],
+  authors: [{ name: "Marcos Vinicius Angeli Costa", url: "https://marcosangeli.com.br" }],
   creator: "Marcos Vinicius Angeli Costa",
   publisher: "Marcos Vinicius Angeli Costa",
   robots: {
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
     title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
     description:
       "Explore o portfólio de Marcos Vinicius Angeli Costa: projetos de software, experiência em React, Java, microfrontends e soluções escaláveis.",
-    url: "https://seu-dominio.com",
+    url: "https://marcosangeli.com.br",
     siteName: "Portfólio de Marcos Vinicius",
     images: [
       {
-        url: "https://seu-dominio.com/images/preview.png",
+        url: "https://marcosangeli.com.br/images/logo-nova.jpg",
         width: 1200,
         height: 630,
         alt: "Marcos Vinicius Angeli Costa - Engenheiro de Software",
@@ -68,10 +68,10 @@ export const metadata: Metadata = {
     title: "Marcos Vinicius Angeli Costa | Engenheiro de Software & Desenvolvedor Full Stack",
     description:
       "Portfólio de Marcos Vinicius Angeli Costa com foco em React, Next, Py, Java, TypeScript e arquitetura de sistemas modernos.",
-    images: ["https://seu-dominio.com/images/preview.png"],
+    images: ["https://marcosangeli.com.br/images/logo-nova.jpg"],
   },
   alternates: {
-    canonical: "https://seu-dominio.com",
+    canonical: "https://marcosangeli.com.br",
   },
   category: "technology"
 };
@@ -80,13 +80,13 @@ const inter = Inter({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 
-  // let measurementId = process.env.GA_MEASUREMENT_ID;
+  let measurementId = process.env.GA_MEASUREMENT_ID;
   return (
     <html lang="pt-BR" className={inter.className}>
       <head>
           <meta
             name="google-site-verification"
-            content="xc8iyy7wr62wsB2oXh7fMydxG2c5Ax3oK4CZdSILBSE"
+            content="4uzC5YQu0by7WydggOCDNbOqwYKgSICJkMkykGIrOKo"
           />
       </head>
       <body>
@@ -98,17 +98,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 "@context": "https://schema.org",
                 "@type": "Person",
                 name: "Marcos Vinicius Angeli Costa",
-                url: "https://seu-dominio.com",
-                image: "https://seu-dominio.com/images/profile.png",
+                url: "https://marcosangeli.com.br",
+                image: "https://marcosangeli.com.br/images/logo-nova.jpg",
                 sameAs: [
-                  "https://github.com/seu-usuario",
-                  "https://www.linkedin.com/in/seu-linkedin",
-                  "https://twitter.com/seu-usuario"
+                  "https://github.com/MarcosVinicius556",
+                  "https://www.linkedin.com/in/marcos-vinicius-angeli-costa/"
                 ],
                 jobTitle: "Engenheiro de Software",
                 worksFor: {
                   "@type": "Organization",
-                  name: "Sua Empresa Atual ou 'Freelancer'"
+                  name: "Marcos Vinicius Angeli Costa"
                 },
                 description:
                   "Engenheiro de Software com experiência em desenvolvimento full stack, React, Java, microfrontends, arquitetura de sistemas e soluções escaláveis.",
@@ -126,12 +125,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               }),
             }}
           />
-          {/* <Script
+          <Script
               strategy="afterInteractive"
               src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-          /> */}
+          />
 
-          {/* <Script
+          <Script
             id="google-analytics"
             strategy="afterInteractive"
           >
@@ -141,7 +140,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               gtag('js', new Date());
               gtag('config', '${measurementId}');
             `}
-          </Script> */}
+          </Script>
           <Providers>
             <Navbar />
             {children}
