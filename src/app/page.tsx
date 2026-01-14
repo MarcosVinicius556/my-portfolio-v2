@@ -3,7 +3,7 @@ import SkillsCarousel from "@/components/skillsCarousel";
 import Projects from "@/sections/Projects";
 import Testimonials from "@/sections/Testimonials";
 import SocialMedia from "@/sections/SocialMedia";
-import FAQ from "@/sections/Faq";
+import FAQ from "@/sections/FAQ";
 import Contact from "@/sections/Contact";
 import About from "@/sections/About";
 import Achivments from "@/sections/Achivments";

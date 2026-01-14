@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useState } from "react";
-import styles from "@/sections/projects/projects.module.css";
+import styles from "@/sections/Projects/projects.module.css";
 import { FaGamepad, FaGithub } from "react-icons/fa";
 import { RiPsychotherapyLine } from "react-icons/ri";
 import { AiOutlineAlignCenter, AiOutlineIssuesClose } from "react-icons/ai";

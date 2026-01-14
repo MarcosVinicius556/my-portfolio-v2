@@ -2,7 +2,7 @@
 
 import Typewriter from 'typewriter-effect';
 import { useTranslation } from "@/app/i18n/useTranslation";
-import styles from "@/sections/hero/hero.module.css";
+import styles from "@/sections/Hero/hero.module.css";
 import { motion } from "framer-motion";
 
 export default function Hero() {
